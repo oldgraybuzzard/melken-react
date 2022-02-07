@@ -415,3 +415,28 @@ form label:hover {
 .portfolio-box-caption-content i.fab {
   font-size: 2rem;
 }
+
+.about-carousel p {
+  color: #FAFAFF;
+  font-size: 1.7rem;
+  text-shadow: 2px 2px #252422;
+}
+
+.about-carousel h3 {
+  color: #FAFAFF;
+  font-size: 3.5rem;
+  text-shadow: 3px 3px #252422;
+}
+
+.about-what {
+  padding-top: 2rem;
+}
+
+.about-what h2 {
+  font-size: 3.5rem;
+}
+
+.icon-ietm {
+  color: #F46036;
+  
+}
