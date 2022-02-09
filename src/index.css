@@ -436,7 +436,22 @@ form label:hover {
   font-size: 3.5rem;
 }
 
-.icon-ietm {
-  color: #F46036;
-  
+@media (max-width: 768px) {
+  .about-what h2 {
+    font-size: 2.5rem;
+  }  
+}
+
+.about-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+}
+
+.card-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
