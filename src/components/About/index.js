@@ -10,6 +10,7 @@ import pm from '../../assets/icons/pm.jpg';
 import engsupport from '../../assets/icons/eng-support.jpg';
 import logsupport from '../../assets/icons/logistics-support.jpg';
 import training from '../../assets/icons/training.jpg';
+
 function About(){
   const [pages] = useState([
     {

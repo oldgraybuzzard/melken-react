@@ -14,6 +14,17 @@ function Nav(props) {
       document.title = capitalizeFirstLetter(currentPage.name);
   }, [currentPage]);
 
+      const icons = [
+        {
+            name: "fab fa-linkedin fa-lg",
+            link: "https://www.linkedin.com/company/melken-solutions-llc"
+        },
+        {
+            name: "fab fa-twitter fa-lg",
+            link: "https://twitter.com/melkensolutions"
+        }
+    ]
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div className="container-fluid">
@@ -40,6 +51,14 @@ function Nav(props) {
                     </li>
                 ))}
             </ul>
+
+        </div>
+        <div className='col-md-auto'>
+                {icons.map(icon =>
+                    (
+                        <a href={icon.link} key={icon.name} target="_blank" rel="noopener noreferrer"><i className={icon.name} style={{color: '#FF7F11'}}></i>{' '}</a>
+                    )
+                )}                         
         </div>
     </div>
 </nav>
