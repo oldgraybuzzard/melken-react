@@ -1,7 +1,7 @@
 {
-  "name": "Melken Solutions Website",
+  "name": "crispy-giggle",
   "version": "1.0.0",
-  "description": "Melken Solutions Website",
+  "description": "TrainingManagementProgram",
   "main": "server/server.js",
   "devDependencies": {
     "concurrently": "^7.0.0"
