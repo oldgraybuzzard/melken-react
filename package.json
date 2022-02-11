@@ -1,7 +1,7 @@
 {
-  "name": "crispy-giggle",
+  "name": "melken-react",
   "version": "1.0.0",
-  "description": "TrainingManagementProgram",
+  "description": "Melken Solution website built with React",
   "main": "server/server.js",
   "devDependencies": {
     "concurrently": "^7.0.0"
@@ -15,16 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oldgraybuzzard/crispy-giggle.git"
+    "url": ""
   },
-  "author": "Crispy Gigglers",
+  "author": "OldGrayBuzzard",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oldgraybuzzard/crispy-giggle/issues"
-  },
-  "homepage": "https://github.com/oldgraybuzzard/crispy-giggle#readme",
+  "homepage": "",
   "dependencies": {
     "express": "^4.17.2",
     "mongo": "^0.1.0"
-  }
+  },
+  "keywords": []
 }
