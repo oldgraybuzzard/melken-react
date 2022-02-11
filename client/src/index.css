@@ -323,11 +323,29 @@ div.masthead p {
 
 /* Footer */
 footer a {
-  margin: 15pt;
+  margin: 1pt;
+  color: #FAFAFF;
+}
+
+footer h5 {
+  color: #252422
+}
+
+footer p {
+  margin: 1pt;
+  color: #FAFAFF;
+}
+
+footer ul a {
+  color: #FAFAFF;
 }
 
 footer i.fab {
   font-size: 2rem;
+}
+
+footer label.form-label {
+  color: #FAFAFF
 }
 
 a.white-link {
@@ -455,3 +473,9 @@ form label:hover {
     margin-right: auto;
     width: 50%;
 }
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
