@@ -1,11 +1,11 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormatter');
 
-const newsSchema = new Schema(
+const newsArticleSchema = new Schema(
   {
     newsTitle: {
       type: String,
-      required: "You havn't entered a title!",
+      required: "You haven't entered a title!",
       minlength: 1,
       maxlength: 120,
     },
@@ -33,6 +33,6 @@ const newsSchema = new Schema(
   }
 );
 
-const News =  model('News', newsSchema);
+const NewsArticle =  model('NewsArticle', newsArticleSchema);
 
-module.exports = News;
+module.exports = NewsArticle;

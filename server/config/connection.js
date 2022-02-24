@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || `mongodb://localhost/${process.env.MONGODB_URI}`,
+  process.env.MONGODB_URI || 'mongodb://localhost/melkenNewsFeed',
   {
     useNewUrlParser: true,
-    useUnifiedTopolog: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
   }
 );
 

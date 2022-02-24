@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormatter');
+const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
   {
@@ -14,6 +15,7 @@ const userSchema = new Schema(
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     role: {
       type: String,

@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
-const secret = process.env.SUPER_SECRET;
-const expiration = '1h';
+const secret = 'mysecretsshhhhhHIHka07563":*(%$^Nnf234?/+fhhQ2DGF*&*)Jenfdh3<0<%jfdbvVHN1454djsfj121FGB';
+const expiration = '2h';
 
 module.exports = {
   signToken: function ({ email, _id }) {
@@ -37,11 +37,10 @@ module.exports = {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch {
-      console.log('Invalid Tolkien... I mean Invalid Token ;P');
+      console.log('Invalid Token');
     }
 
     // return the updated request
     return req;
   },
 };
-
