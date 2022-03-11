@@ -10,9 +10,9 @@ function Nav(props) {
     currentPage,
   } = props;
 
-    useEffect(() => {
-      document.title = capitalizeFirstLetter(currentPage.name);
-  }, [currentPage]);
+//     useEffect(() => {
+//       document.title = capitalizeFirstLetter(currentPage.name);
+//   }, [currentPage]);
 
       const icons = [
         {
@@ -64,6 +64,5 @@ function Nav(props) {
 </nav>
 );
 }
-
 
 export default Nav;

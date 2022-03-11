@@ -1,38 +1,60 @@
-import React, {useState} from 'react';
+import * as React from "react";
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
 import './index.css';
-import { send } from 'emailjs-com';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Header from './components/Header';
+// import Header from './components/Header';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
-import Page from './components/Page';
+import Home from './pages/Home';
+
+const httpLink = createHttpLink({
+  // uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-  const [pages] = useState([
-    { name: "about us" },
-    { name: "services" },
-    { name: "government" },
-    { name: "portfolio"},
-    { name: "contact us" },
-]);
-
-const [currentPage, setCurrentPage] = useState(pages[0]);
-
   return (
-    <div>
-      <Header>
-        <Nav
-          pages={pages}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        ></Nav>
-      </Header>
-      <main>
-        <Page currentPage={currentPage}></Page>
-      </main>
-      <Footer></Footer>
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Nav />
+            <div className='container'>
+              <Routes>
+                <Route path='/' element={<Home />} />
+              </Routes>
+            </div>
+          <Footer />
+        </div>
+      </Router>
+    </ApolloProvider>
     
   );
 }

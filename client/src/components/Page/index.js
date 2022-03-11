@@ -1,6 +1,6 @@
 import React from 'react';
 import PageContent from '../PageContent';
-import About from '../About';
+import About from '../Home';
 import Services from '../Services';
 import Contact from '../Contact';
 import Government from '../Government';
